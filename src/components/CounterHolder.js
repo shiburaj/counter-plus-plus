@@ -1,26 +1,28 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import CounterWidget from './CounterWidget'
 
 export default function CounterHolder(props) {
+    const counter = useSelector(state => state.counter);
   return (
-    <div class="row">
+    <div className="row">
         <CounterWidget 
             color="bg-white" 
             title="Basic Counter" 
             
-            data={props.counter.basic} />
+            data={counter.basic} />
 
         <CounterWidget 
             color="bg-info text-white" 
             title="Smart Counter" 
             
-            data={props.counter.smart} />
+            data={counter.smart} />
 
         <CounterWidget 
             color="bg-success text-white" 
             title="Dangerous Counter" 
             
-            data={props.counter.dangerous} />
+            data={counter.dangerous} />
         
     </div>
   )
