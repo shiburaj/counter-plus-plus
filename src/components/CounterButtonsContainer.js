@@ -2,13 +2,12 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import CounterChange from './CounterChange'
 import CounterSelector from './CounterSelector'
+import { reset } from '../features/counter/counterSlice';
 
 export default function CounterButtonsContainer(props) {
     const dispatch = useDispatch();
     function handleReset(){
-        dispatch({
-          type: 'reset'
-        })
+        dispatch(reset())
       }
 
   return (

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import CounterWidget from './CounterWidget'
 
 export default function CounterHolder(props) {
-    const counter = useSelector(state => state.counter);
+    const counter = useSelector(state => state.counter.counter);
   return (
     <div className="row">
         <CounterWidget 
